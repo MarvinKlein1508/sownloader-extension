@@ -20,9 +20,7 @@ function fallbackDownload(url, filename) {
 
 function downloadFile(url, filename) {
   if (!url) return;
-  console.log("isFirefoxAndroid");
-  console.log(isFirefoxAndroid());
-
+ 
   if (isFirefoxAndroid()) {
     fallbackDownload(url, filename);
     return;
@@ -49,8 +47,6 @@ ext.runtime.onMessage.addListener((msg) => {
   const BUTTON_ID = "sownloader";
   const DIALOG_ID = "sownloader-dialog";
 
-  console.log("EXTENSION LOADED");
-
   async function insertUI() {
     const match = window.location.href.match(/(\d+_\d+)(?=\/|$)/);
     const id = match ? match[1] : null;
@@ -58,6 +54,8 @@ ext.runtime.onMessage.addListener((msg) => {
     if (!id) {
       return false;
     }
+
+    console.log("SOWNLOADER EXTENSION LOADED");
 
     const target = document.querySelector(TARGET_SELECTOR);
 
@@ -75,6 +73,13 @@ ext.runtime.onMessage.addListener((msg) => {
     button.textContent = "Sownloader";
 
     button.addEventListener("click", async () => {
+      const match = window.location.href.match(/(\d+_\d+)(?=\/|$)/);
+      const id = match ? match[1] : null;
+
+      if (!id) {
+        return false;
+      }
+
       const dialog = document.getElementById(DIALOG_ID);
       const btnDownloadAudio = document.getElementById("sownloader-download-audio");
       const btnDownloadVideo = document.getElementById("sownloader-download-video");
@@ -82,8 +87,6 @@ ext.runtime.onMessage.addListener((msg) => {
 
 
       if (!dialog) return;
-
-
 
       try {
         const url = `https://www.smule.com/api/performance/${id}`;
@@ -106,12 +109,6 @@ ext.runtime.onMessage.addListener((msg) => {
 
         const downloadAudioLink = performanceData.media_url ? await processRecording(performanceData.media_url) : null;
         const downloadVideoLink = performanceData.video_media_mp4_url ? await processRecording(performanceData.video_media_mp4_url) : null;
-
-        // console.log("Download link:", downloadLink);
-        console.log(performanceData.title);
-
-
-        //titleEl.textContent = performanceData.title || "Unbekannt";
 
         console.log(downloadAudioLink);
         console.log(downloadVideoLink);
