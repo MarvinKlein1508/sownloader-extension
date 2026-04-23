@@ -1,0 +1,17 @@
+{
+  "appName": {
+    "message": "Sownloader von Marvin Klein"
+  },
+  "appDescription": {
+    "message": "Sownloader ist der beste verfügbare Smule Downloader."
+  },
+  "paypalDonate": {
+    "message": "Jetzt Spenden"
+  },
+  "becomePatreon": {
+    "message": "Unterstütze mich auf Patreon"
+  },
+  "renderingError": {
+    "message": "Die Aufnahme muss zuerst gerendert werden. Klicken Sie auf den Media-Player, warten Sie, bis der Vorgang abgeschlossen ist, und versuchen Sie es dann erneut."
+  }
+}

@@ -1,0 +1,30 @@
+#sownloader {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 6px;
+  background: rgb(108, 46, 255);
+  color: rgb(255, 255, 255);
+}
+
+#sownloader-download-audio, #sownloader-download-video, .sownloader-btn {
+  display: block;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 6px;
+  background: rgb(108, 46, 255);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+}
+
+.sownloader-separator {
+  width: 100%;
+}
