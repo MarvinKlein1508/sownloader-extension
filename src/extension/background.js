@@ -27,7 +27,14 @@ ext.runtime.onMessage.addListener((msg, sender) => {
       return ext.tabs.sendMessage(sender.tab.id, {
         type: "FALLBACK_DOWNLOAD_SMULE",
         url: msg.url,
-        filename: msg.filename
+        filename: msg.filename,
+        headers: [
+          {
+            name: "Referer",
+            value: "https://www.smule.com/"
+          }
+        ],
+        conflictAction: "uniquify"
       }).catch((fallbackError) => {
         console.warn("Fallback message failed", fallbackError);
       });
