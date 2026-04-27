@@ -1,47 +1,74 @@
 const ext = typeof browser !== "undefined" ? browser : chrome;
 
-function isFirefoxAndroid() {
-  const ua = navigator.userAgent || "";
-  return /Android/i.test(ua) && /Firefox/i.test(ua);
-}
-
-function fallbackDownload(url, filename) {
-  if (!url) return;
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename || "download";
-  a.rel = "noopener noreferrer";
-  a.style.display = "none";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-}
-
-function downloadFile(url, filename) {
-  if (!url) return;
- 
-  if (isFirefoxAndroid()) {
-    fallbackDownload(url, filename);
-    return;
+function sendRuntimeMessage(message) {
+  if (typeof browser !== "undefined" && browser.runtime?.sendMessage) {
+    return browser.runtime.sendMessage(message);
   }
 
-  ext.runtime.sendMessage({
-    type: "DOWNLOAD_SMULE",
-    url,
-    filename
-  }).catch((error) => {
-    console.warn("Background download failed, using fallback", error);
-    fallbackDownload(url, filename);
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage(message, (response) => {
+      const lastError = chrome.runtime.lastError;
+      if (lastError) {
+        reject(new Error(lastError.message));
+        return;
+      }
+      resolve(response);
+    });
   });
 }
 
-ext.runtime.onMessage.addListener((msg) => {
-  if (msg?.type === "FALLBACK_DOWNLOAD_SMULE") {
-    fallbackDownload(msg.url, msg.filename);
-  }
-});
+function base64ToBlob(base64, contentType) {
+  const byteCharacters = atob(base64);
+  const chunkSize = 1024 * 1024;
+  const byteArrays = [];
 
+  for (let offset = 0; offset < byteCharacters.length; offset += chunkSize) {
+    const slice = byteCharacters.slice(offset, offset + chunkSize);
+    const bytes = new Uint8Array(slice.length);
+
+    for (let i = 0; i < slice.length; i++) {
+      bytes[i] = slice.charCodeAt(i);
+    }
+
+    byteArrays.push(bytes);
+  }
+
+  return new Blob(byteArrays, { type: contentType || "application/octet-stream" });
+}
+
+async function downloadFile(url, filename) {
+  if (!url) return;
+
+  try {
+    const response = await sendRuntimeMessage({
+      type: "FETCH_SMULE_AS_BASE64",
+      url
+    });
+
+    if (!response?.ok || !response.base64) {
+      throw new Error(response?.error || "Background fetch failed");
+    }
+
+    const blob = base64ToBlob(response.base64, response.contentType);
+    const blobUrl = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = filename || "download";
+    a.rel = "noopener noreferrer";
+    a.style.display = "none";
+
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    setTimeout(() => {
+      URL.revokeObjectURL(blobUrl);
+    }, 30000);
+  } catch (error) {
+    console.error("Blob download failed", error);
+  }
+}
 (() => {
   const TARGET_SELECTOR = "body";
   const BUTTON_ID = "sownloader";
