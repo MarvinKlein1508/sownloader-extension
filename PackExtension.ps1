@@ -1,9 +1,12 @@
 # PackExtension.ps1
 
-$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$sourceExtensionDir = Join-Path $scriptRoot "src\extension"
-$manifestsDir = Join-Path $scriptRoot "src\manifests"
+$scriptRoot = Split-Path -Parent $PSCommandPath
+$sourceExtensionDir = Join-Path $scriptRoot "src/extension"
+$manifestsDir = Join-Path $scriptRoot "src/manifests"
 $outputDir = Join-Path $scriptRoot "output"
+
+# macOS/Linux/Windows kompatibles Temp-Verzeichnis
+$tempRoot = [System.IO.Path]::GetTempPath()
 
 # --- Target selection ---
 Write-Host "Select which extension should be created:" -ForegroundColor Cyan
@@ -62,12 +65,15 @@ if (-not (Test-Path $outputDir)) {
 }
 
 # --- Prepare temp dir ---
-$tempDir = Join-Path $env:TEMP ("sownloader-build-" + [guid]::NewGuid().ToString())
+$tempDir = Join-Path $tempRoot ("sownloader-build-" + [guid]::NewGuid().ToString())
 New-Item -ItemType Directory -Path $tempDir | Out-Null
 
 try {
     Write-Host "Copying extension files..." -ForegroundColor Yellow
-    Copy-Item -Path (Join-Path $sourceExtensionDir "*") -Destination $tempDir -Recurse -Force
+
+    Get-ChildItem -Path $sourceExtensionDir -Force | ForEach-Object {
+        Copy-Item -Path $_.FullName -Destination $tempDir -Recurse -Force
+    }
 
     Write-Host "Using manifest for $target..." -ForegroundColor Yellow
     Copy-Item -Path $manifestSource -Destination (Join-Path $tempDir "manifest.json") -Force
@@ -86,13 +92,19 @@ try {
         }
 
         Write-Host "Creating ZIP package..." -ForegroundColor Yellow
-        Compress-Archive -Path (Join-Path $tempDir "*") -DestinationPath $zipPath -Force
+
+        $itemsToZip = Get-ChildItem -Path $tempDir -Force
+        Compress-Archive -Path $itemsToZip.FullName -DestinationPath $zipPath -Force
 
         Write-Host "ZIP created: $zipPath" -ForegroundColor Green
     }
     else {
         Write-Host "Creating folder output..." -ForegroundColor Yellow
-        Copy-Item -Path $tempDir -Destination $finalOutputPath -Recurse -Force
+        New-Item -ItemType Directory -Path $finalOutputPath | Out-Null
+
+        Get-ChildItem -Path $tempDir -Force | ForEach-Object {
+            Copy-Item -Path $_.FullName -Destination $finalOutputPath -Recurse -Force
+        }
 
         Write-Host "Folder created: $finalOutputPath" -ForegroundColor Green
     }
