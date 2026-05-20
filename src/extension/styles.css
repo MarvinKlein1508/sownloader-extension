@@ -28,3 +28,32 @@
 .sownloader-separator {
   width: 100%;
 }
+.sownloader-loading {
+  opacity: 0.85;
+  cursor: wait !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.sownloader-loading:disabled {
+  cursor: wait !important;
+}
+
+.sownloader-spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: sownloader-spin 0.75s linear infinite;
+  flex: 0 0 auto;
+}
+
+@keyframes sownloader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

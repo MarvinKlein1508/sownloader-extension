@@ -80,8 +80,31 @@ function fetchSmuleAsBlobChunked(url) {
   });
 }
 
-async function downloadFile(url, filename) {
+function setDownloadButtonLoading(button, isLoading) {
+  if (!button) return;
+
+  if (isLoading) {
+    if (!button.dataset.originalText) {
+      button.dataset.originalText = button.textContent || "Download";
+    }
+
+    button.classList.add("sownloader-loading");
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    button.innerHTML = `<span class="sownloader-spinner" aria-hidden="true"></span><span>${button.dataset.originalText}</span>`;
+    return;
+  }
+
+  button.classList.remove("sownloader-loading");
+  button.disabled = false;
+  button.removeAttribute("aria-busy");
+  button.textContent = button.dataset.originalText || "Download";
+}
+
+async function downloadFile(url, filename, button) {
   if (!url) return;
+
+  setDownloadButtonLoading(button, true);
 
   try {
     const blob = await fetchSmuleAsBlobChunked(url);
@@ -102,6 +125,8 @@ async function downloadFile(url, filename) {
     }, 30000);
   } catch (error) {
     console.error("Blob download failed", error);
+  } finally {
+    setDownloadButtonLoading(button, false);
   }
 }
 (() => {
@@ -182,9 +207,10 @@ async function downloadFile(url, filename) {
         else {
           btnDownloadAudio.style.display = "block";
           btnDownloadAudio.onclick = async () => {
-            downloadFile(
+            await downloadFile(
               downloadAudioLink,
-              (performanceData.title || "smule_recording") + ".m4a"
+              (performanceData.title || "smule_recording") + ".m4a",
+              btnDownloadAudio
             );
           };
         }
@@ -196,9 +222,10 @@ async function downloadFile(url, filename) {
         else {
           btnDownloadVideo.style.display = "block";
           btnDownloadVideo.onclick = async () => {
-            downloadFile(
+            await downloadFile(
               downloadVideoLink,
-              (performanceData.title || "smule_recording") + ".mp4"
+              (performanceData.title || "smule_recording") + ".mp4",
+              btnDownloadVideo
             );
           };
         }
