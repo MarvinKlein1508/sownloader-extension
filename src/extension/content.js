@@ -1,55 +1,90 @@
 const ext = typeof browser !== "undefined" ? browser : chrome;
 
-function sendRuntimeMessage(message) {
-  if (typeof browser !== "undefined" && browser.runtime?.sendMessage) {
-    return browser.runtime.sendMessage(message);
+const PORT_NAME = "SMULE_CHUNK_DOWNLOAD";
+
+function base64ToUint8Array(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
   }
 
-  return new Promise((resolve, reject) => {
-    chrome.runtime.sendMessage(message, (response) => {
-      const lastError = chrome.runtime.lastError;
-      if (lastError) {
-        reject(new Error(lastError.message));
-        return;
-      }
-      resolve(response);
-    });
-  });
+  return bytes;
 }
 
-function base64ToBlob(base64, contentType) {
-  const byteCharacters = atob(base64);
-  const chunkSize = 1024 * 1024;
-  const byteArrays = [];
-
-  for (let offset = 0; offset < byteCharacters.length; offset += chunkSize) {
-    const slice = byteCharacters.slice(offset, offset + chunkSize);
-    const bytes = new Uint8Array(slice.length);
-
-    for (let i = 0; i < slice.length; i++) {
-      bytes[i] = slice.charCodeAt(i);
-    }
-
-    byteArrays.push(bytes);
+function connectRuntimePort(name) {
+  if (typeof browser !== "undefined" && browser.runtime?.connect) {
+    return browser.runtime.connect({ name });
   }
 
-  return new Blob(byteArrays, { type: contentType || "application/octet-stream" });
+  return chrome.runtime.connect({ name });
+}
+
+function fetchSmuleAsBlobChunked(url) {
+  return new Promise((resolve, reject) => {
+    const port = connectRuntimePort(PORT_NAME);
+    const chunks = [];
+    let contentType = "application/octet-stream";
+    let finished = false;
+
+    const cleanup = () => {
+      try {
+        port.disconnect();
+      } catch (error) {
+        // Port may already be disconnected.
+      }
+    };
+
+    port.onMessage.addListener((msg) => {
+      if (msg?.type === "META") {
+        contentType = msg.contentType || contentType;
+        return;
+      }
+
+      if (msg?.type === "CHUNK") {
+        chunks[msg.index] = base64ToUint8Array(msg.base64);
+        return;
+      }
+
+      if (msg?.type === "DONE") {
+        finished = true;
+
+        const blob = new Blob(chunks, {
+          type: msg.contentType || contentType
+        });
+
+        cleanup();
+        resolve(blob);
+        return;
+      }
+
+      if (msg?.type === "ERROR") {
+        finished = true;
+        cleanup();
+        reject(new Error(msg.error || "Background fetch failed"));
+      }
+    });
+
+    port.onDisconnect.addListener(() => {
+      if (!finished) {
+        const lastError = ext.runtime?.lastError;
+        reject(new Error(lastError?.message || "Background connection closed before download completed"));
+      }
+    });
+
+    port.postMessage({
+      type: "START",
+      url
+    });
+  });
 }
 
 async function downloadFile(url, filename) {
   if (!url) return;
 
   try {
-    const response = await sendRuntimeMessage({
-      type: "FETCH_SMULE_AS_BASE64",
-      url
-    });
-
-    if (!response?.ok || !response.base64) {
-      throw new Error(response?.error || "Background fetch failed");
-    }
-
-    const blob = base64ToBlob(response.base64, response.contentType);
+    const blob = await fetchSmuleAsBlobChunked(url);
     const blobUrl = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
