@@ -1,1 +1,38 @@
 [Oo]utput/
+# macOS
+.DS_Store
+
+# Xcode User Data
+xcuserdata/
+*.xcuserstate
+
+# Build-Artefacts
+build/
+DerivedData/
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# Xcode Cloud
+ci_scripts/.build/
+
+# Fastlane (falls genutzt)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Crash Logs
+*.xccrashpoint
+*.crash
+
+# Editor
+.vscode/
+.idea/
+
+# Temporary Files
+*.swp
+*.swo
+*~

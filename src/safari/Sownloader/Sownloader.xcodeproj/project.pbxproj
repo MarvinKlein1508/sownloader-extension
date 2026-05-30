@@ -1,0 +1,1031 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3E78AEB2FCB2E0F00E3784E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEA2FCB2E0F00E3784E /* Icon.png */; };
+		B3E78AEC2FCB2E0F00E3784E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEA2FCB2E0F00E3784E /* Icon.png */; };
+		B3E78AF32FCB35FE00E3784E /* ios-step1.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AED2FCB35FE00E3784E /* ios-step1.png */; };
+		B3E78AF42FCB35FE00E3784E /* ios-step3.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEF2FCB35FE00E3784E /* ios-step3.png */; };
+		B3E78AF52FCB35FE00E3784E /* ios-step5.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF12FCB35FE00E3784E /* ios-step5.png */; };
+		B3E78AF62FCB35FE00E3784E /* ios-step6.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF22FCB35FE00E3784E /* ios-step6.png */; };
+		B3E78AF72FCB35FE00E3784E /* ios-step4.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF02FCB35FE00E3784E /* ios-step4.png */; };
+		B3E78AF82FCB35FE00E3784E /* ios-step2.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEE2FCB35FE00E3784E /* ios-step2.png */; };
+		B3E78AF92FCB35FE00E3784E /* ios-step1.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AED2FCB35FE00E3784E /* ios-step1.png */; };
+		B3E78AFA2FCB35FE00E3784E /* ios-step3.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEF2FCB35FE00E3784E /* ios-step3.png */; };
+		B3E78AFB2FCB35FE00E3784E /* ios-step5.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF12FCB35FE00E3784E /* ios-step5.png */; };
+		B3E78AFC2FCB35FE00E3784E /* ios-step6.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF22FCB35FE00E3784E /* ios-step6.png */; };
+		B3E78AFD2FCB35FE00E3784E /* ios-step4.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AF02FCB35FE00E3784E /* ios-step4.png */; };
+		B3E78AFE2FCB35FE00E3784E /* ios-step2.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E78AEE2FCB35FE00E3784E /* ios-step2.png */; };
+		B3F156182FCB1909006B355B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F156172FCB1909006B355B /* AppDelegate.swift */; };
+		B3F1561A2FCB1909006B355B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F156192FCB1909006B355B /* SceneDelegate.swift */; };
+		B3F1561D2FCB1909006B355B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F1561B2FCB1909006B355B /* LaunchScreen.storyboard */; };
+		B3F156202FCB1909006B355B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F1561E2FCB1909006B355B /* Main.storyboard */; };
+		B3F156292FCB1909006B355B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F156282FCB1909006B355B /* AppDelegate.swift */; };
+		B3F1562C2FCB1909006B355B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F1562A2FCB1909006B355B /* Main.storyboard */; };
+		B3F156332FCB1909006B355B /* Sownloader Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3F156322FCB1909006B355B /* Sownloader Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3F1563D2FCB1909006B355B /* Sownloader Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3F1563C2FCB1909006B355B /* Sownloader Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3F156422FCB1909006B355B /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B3F156072FCB1908006B355B /* Main.html */; };
+		B3F156432FCB1909006B355B /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B3F156072FCB1908006B355B /* Main.html */; };
+		B3F156462FCB1909006B355B /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560A2FCB1908006B355B /* Style.css */; };
+		B3F156472FCB1909006B355B /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560A2FCB1908006B355B /* Style.css */; };
+		B3F156482FCB1909006B355B /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560B2FCB1908006B355B /* Script.js */; };
+		B3F156492FCB1909006B355B /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560B2FCB1908006B355B /* Script.js */; };
+		B3F1564A2FCB1909006B355B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1560C2FCB1908006B355B /* ViewController.swift */; };
+		B3F1564B2FCB1909006B355B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1560C2FCB1908006B355B /* ViewController.swift */; };
+		B3F1564C2FCB1909006B355B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560D2FCB1909006B355B /* Assets.xcassets */; };
+		B3F1564D2FCB1909006B355B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F1560D2FCB1909006B355B /* Assets.xcassets */; };
+		B3F1564E2FCB1909006B355B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1560F2FCB1909006B355B /* SafariWebExtensionHandler.swift */; };
+		B3F1564F2FCB1909006B355B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1560F2FCB1909006B355B /* SafariWebExtensionHandler.swift */; };
+		B3F156662FCB1909006B355B /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = B3F156612FCB1909006B355B /* styles.css */; };
+		B3F156672FCB1909006B355B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F156622FCB1909006B355B /* background.js */; };
+		B3F156682FCB1909006B355B /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F156632FCB1909006B355B /* manifest.json */; };
+		B3F156692FCB1909006B355B /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = B3F156642FCB1909006B355B /* _locales */; };
+		B3F1566A2FCB1909006B355B /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F156652FCB1909006B355B /* content.js */; };
+		B3F1566B2FCB1909006B355B /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = B3F156612FCB1909006B355B /* styles.css */; };
+		B3F1566C2FCB1909006B355B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F156622FCB1909006B355B /* background.js */; };
+		B3F1566D2FCB1909006B355B /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F156632FCB1909006B355B /* manifest.json */; };
+		B3F1566E2FCB1909006B355B /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = B3F156642FCB1909006B355B /* _locales */; };
+		B3F1566F2FCB1909006B355B /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F156652FCB1909006B355B /* content.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3F156342FCB1909006B355B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3F156012FCB1908006B355B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F156312FCB1909006B355B;
+			remoteInfo = "Sownloader Extension (iOS)";
+		};
+		B3F1563E2FCB1909006B355B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3F156012FCB1908006B355B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F1563B2FCB1909006B355B;
+			remoteInfo = "Sownloader Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3F156552FCB1909006B355B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3F156332FCB1909006B355B /* Sownloader Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F1565C2FCB1909006B355B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3F1563D2FCB1909006B355B /* Sownloader Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B3E78AEA2FCB2E0F00E3784E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B3E78AED2FCB35FE00E3784E /* ios-step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step1.png"; sourceTree = "<group>"; };
+		B3E78AEE2FCB35FE00E3784E /* ios-step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step2.png"; sourceTree = "<group>"; };
+		B3E78AEF2FCB35FE00E3784E /* ios-step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step3.png"; sourceTree = "<group>"; };
+		B3E78AF02FCB35FE00E3784E /* ios-step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step4.png"; sourceTree = "<group>"; };
+		B3E78AF12FCB35FE00E3784E /* ios-step5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step5.png"; sourceTree = "<group>"; };
+		B3E78AF22FCB35FE00E3784E /* ios-step6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-step6.png"; sourceTree = "<group>"; };
+		B3F156082FCB1908006B355B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		B3F1560A2FCB1908006B355B /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		B3F1560B2FCB1908006B355B /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		B3F1560C2FCB1908006B355B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3F1560D2FCB1909006B355B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3F1560F2FCB1909006B355B /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		B3F156142FCB1909006B355B /* Sownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F156172FCB1909006B355B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3F156192FCB1909006B355B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B3F1561C2FCB1909006B355B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3F1561F2FCB1909006B355B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3F156212FCB1909006B355B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F156262FCB1909006B355B /* Sownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F156282FCB1909006B355B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3F1562B2FCB1909006B355B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3F1562D2FCB1909006B355B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F156322FCB1909006B355B /* Sownloader Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sownloader Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F156372FCB1909006B355B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F1563C2FCB1909006B355B /* Sownloader Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sownloader Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F156412FCB1909006B355B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F156612FCB1909006B355B /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = styles.css; path = "../../../../output/sownloader-chrome/styles.css"; sourceTree = "<group>"; };
+		B3F156622FCB1909006B355B /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = "../../../../output/sownloader-chrome/background.js"; sourceTree = "<group>"; };
+		B3F156632FCB1909006B355B /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../../../output/sownloader-chrome/manifest.json"; sourceTree = "<group>"; };
+		B3F156642FCB1909006B355B /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = "../../../../output/sownloader-chrome/_locales"; sourceTree = "<group>"; };
+		B3F156652FCB1909006B355B /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = "../../../../output/sownloader-chrome/content.js"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3F156112FCB1909006B355B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156232FCB1909006B355B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F1562F2FCB1909006B355B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156392FCB1909006B355B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3F156002FCB1908006B355B = {
+			isa = PBXGroup;
+			children = (
+				B3F156052FCB1908006B355B /* Shared (App) */,
+				B3F1560E2FCB1909006B355B /* Shared (Extension) */,
+				B3F156162FCB1909006B355B /* iOS (App) */,
+				B3F156272FCB1909006B355B /* macOS (App) */,
+				B3F156362FCB1909006B355B /* iOS (Extension) */,
+				B3F156402FCB1909006B355B /* macOS (Extension) */,
+				B3F156152FCB1909006B355B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3F156052FCB1908006B355B /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F1560C2FCB1908006B355B /* ViewController.swift */,
+				B3F1560D2FCB1909006B355B /* Assets.xcassets */,
+				B3F156062FCB1908006B355B /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		B3F156062FCB1908006B355B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3E78AED2FCB35FE00E3784E /* ios-step1.png */,
+				B3E78AEE2FCB35FE00E3784E /* ios-step2.png */,
+				B3E78AEF2FCB35FE00E3784E /* ios-step3.png */,
+				B3E78AF02FCB35FE00E3784E /* ios-step4.png */,
+				B3E78AF12FCB35FE00E3784E /* ios-step5.png */,
+				B3E78AF22FCB35FE00E3784E /* ios-step6.png */,
+				B3F156072FCB1908006B355B /* Main.html */,
+				B3F1560A2FCB1908006B355B /* Style.css */,
+				B3F1560B2FCB1908006B355B /* Script.js */,
+				B3E78AEA2FCB2E0F00E3784E /* Icon.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3F1560E2FCB1909006B355B /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156602FCB1909006B355B /* Resources */,
+				B3F1560F2FCB1909006B355B /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		B3F156152FCB1909006B355B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156142FCB1909006B355B /* Sownloader.app */,
+				B3F156262FCB1909006B355B /* Sownloader.app */,
+				B3F156322FCB1909006B355B /* Sownloader Extension.appex */,
+				B3F1563C2FCB1909006B355B /* Sownloader Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3F156162FCB1909006B355B /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156172FCB1909006B355B /* AppDelegate.swift */,
+				B3F156192FCB1909006B355B /* SceneDelegate.swift */,
+				B3F1561B2FCB1909006B355B /* LaunchScreen.storyboard */,
+				B3F1561E2FCB1909006B355B /* Main.storyboard */,
+				B3F156212FCB1909006B355B /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		B3F156272FCB1909006B355B /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156282FCB1909006B355B /* AppDelegate.swift */,
+				B3F1562A2FCB1909006B355B /* Main.storyboard */,
+				B3F1562D2FCB1909006B355B /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		B3F156362FCB1909006B355B /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156372FCB1909006B355B /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		B3F156402FCB1909006B355B /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156412FCB1909006B355B /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		B3F156602FCB1909006B355B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3F156612FCB1909006B355B /* styles.css */,
+				B3F156622FCB1909006B355B /* background.js */,
+				B3F156632FCB1909006B355B /* manifest.json */,
+				B3F156642FCB1909006B355B /* _locales */,
+				B3F156652FCB1909006B355B /* content.js */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3F156132FCB1909006B355B /* Sownloader (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F156562FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader (iOS)" */;
+			buildPhases = (
+				B3F156102FCB1909006B355B /* Sources */,
+				B3F156112FCB1909006B355B /* Frameworks */,
+				B3F156122FCB1909006B355B /* Resources */,
+				B3F156552FCB1909006B355B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3F156352FCB1909006B355B /* PBXTargetDependency */,
+			);
+			name = "Sownloader (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Sownloader (iOS)";
+			productReference = B3F156142FCB1909006B355B /* Sownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3F156252FCB1909006B355B /* Sownloader (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F1565D2FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader (macOS)" */;
+			buildPhases = (
+				B3F156222FCB1909006B355B /* Sources */,
+				B3F156232FCB1909006B355B /* Frameworks */,
+				B3F156242FCB1909006B355B /* Resources */,
+				B3F1565C2FCB1909006B355B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3F1563F2FCB1909006B355B /* PBXTargetDependency */,
+			);
+			name = "Sownloader (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Sownloader (macOS)";
+			productReference = B3F156262FCB1909006B355B /* Sownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3F156312FCB1909006B355B /* Sownloader Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F156522FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader Extension (iOS)" */;
+			buildPhases = (
+				B3F1562E2FCB1909006B355B /* Sources */,
+				B3F1562F2FCB1909006B355B /* Frameworks */,
+				B3F156302FCB1909006B355B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sownloader Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Sownloader Extension (iOS)";
+			productReference = B3F156322FCB1909006B355B /* Sownloader Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B3F1563B2FCB1909006B355B /* Sownloader Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F156592FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader Extension (macOS)" */;
+			buildPhases = (
+				B3F156382FCB1909006B355B /* Sources */,
+				B3F156392FCB1909006B355B /* Frameworks */,
+				B3F1563A2FCB1909006B355B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sownloader Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Sownloader Extension (macOS)";
+			productReference = B3F1563C2FCB1909006B355B /* Sownloader Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3F156012FCB1908006B355B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					B3F156132FCB1909006B355B = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					B3F156252FCB1909006B355B = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					B3F156312FCB1909006B355B = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					B3F1563B2FCB1909006B355B = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = B3F156042FCB1908006B355B /* Build configuration list for PBXProject "Sownloader" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3F156002FCB1908006B355B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B3F156152FCB1909006B355B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3F156132FCB1909006B355B /* Sownloader (iOS) */,
+				B3F156252FCB1909006B355B /* Sownloader (macOS) */,
+				B3F156312FCB1909006B355B /* Sownloader Extension (iOS) */,
+				B3F1563B2FCB1909006B355B /* Sownloader Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3F156122FCB1909006B355B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1561D2FCB1909006B355B /* LaunchScreen.storyboard in Resources */,
+				B3F156422FCB1909006B355B /* Main.html in Resources */,
+				B3F156482FCB1909006B355B /* Script.js in Resources */,
+				B3F1564C2FCB1909006B355B /* Assets.xcassets in Resources */,
+				B3F156202FCB1909006B355B /* Main.storyboard in Resources */,
+				B3E78AF92FCB35FE00E3784E /* ios-step1.png in Resources */,
+				B3E78AFA2FCB35FE00E3784E /* ios-step3.png in Resources */,
+				B3E78AFB2FCB35FE00E3784E /* ios-step5.png in Resources */,
+				B3E78AFC2FCB35FE00E3784E /* ios-step6.png in Resources */,
+				B3E78AFD2FCB35FE00E3784E /* ios-step4.png in Resources */,
+				B3E78AFE2FCB35FE00E3784E /* ios-step2.png in Resources */,
+				B3E78AEB2FCB2E0F00E3784E /* Icon.png in Resources */,
+				B3F156462FCB1909006B355B /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156242FCB1909006B355B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E78AF32FCB35FE00E3784E /* ios-step1.png in Resources */,
+				B3E78AF42FCB35FE00E3784E /* ios-step3.png in Resources */,
+				B3E78AF52FCB35FE00E3784E /* ios-step5.png in Resources */,
+				B3E78AF62FCB35FE00E3784E /* ios-step6.png in Resources */,
+				B3E78AF72FCB35FE00E3784E /* ios-step4.png in Resources */,
+				B3E78AF82FCB35FE00E3784E /* ios-step2.png in Resources */,
+				B3E78AEC2FCB2E0F00E3784E /* Icon.png in Resources */,
+				B3F156472FCB1909006B355B /* Style.css in Resources */,
+				B3F1562C2FCB1909006B355B /* Main.storyboard in Resources */,
+				B3F156492FCB1909006B355B /* Script.js in Resources */,
+				B3F1564D2FCB1909006B355B /* Assets.xcassets in Resources */,
+				B3F156432FCB1909006B355B /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156302FCB1909006B355B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1566C2FCB1909006B355B /* background.js in Resources */,
+				B3F1566D2FCB1909006B355B /* manifest.json in Resources */,
+				B3F1566E2FCB1909006B355B /* _locales in Resources */,
+				B3F1566B2FCB1909006B355B /* styles.css in Resources */,
+				B3F1566F2FCB1909006B355B /* content.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F1563A2FCB1909006B355B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F156672FCB1909006B355B /* background.js in Resources */,
+				B3F156682FCB1909006B355B /* manifest.json in Resources */,
+				B3F156692FCB1909006B355B /* _locales in Resources */,
+				B3F156662FCB1909006B355B /* styles.css in Resources */,
+				B3F1566A2FCB1909006B355B /* content.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3F156102FCB1909006B355B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1564A2FCB1909006B355B /* ViewController.swift in Sources */,
+				B3F156182FCB1909006B355B /* AppDelegate.swift in Sources */,
+				B3F1561A2FCB1909006B355B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156222FCB1909006B355B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1564B2FCB1909006B355B /* ViewController.swift in Sources */,
+				B3F156292FCB1909006B355B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F1562E2FCB1909006B355B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1564E2FCB1909006B355B /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F156382FCB1909006B355B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F1564F2FCB1909006B355B /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3F156352FCB1909006B355B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F156312FCB1909006B355B /* Sownloader Extension (iOS) */;
+			targetProxy = B3F156342FCB1909006B355B /* PBXContainerItemProxy */;
+		};
+		B3F1563F2FCB1909006B355B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F1563B2FCB1909006B355B /* Sownloader Extension (macOS) */;
+			targetProxy = B3F1563E2FCB1909006B355B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3F156072FCB1908006B355B /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F156082FCB1908006B355B /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		B3F1561B2FCB1909006B355B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F1561C2FCB1909006B355B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B3F1561E2FCB1909006B355B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F1561F2FCB1909006B355B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3F1562A2FCB1909006B355B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F1562B2FCB1909006B355B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3F156502FCB1909006B355B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3F156512FCB1909006B355B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B3F156532FCB1909006B355B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sownloader Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader.Extension;
+				PRODUCT_NAME = "Sownloader Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3F156542FCB1909006B355B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sownloader Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader.Extension;
+				PRODUCT_NAME = "Sownloader Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3F156572FCB1909006B355B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sownloader;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader;
+				PRODUCT_NAME = Sownloader;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3F156582FCB1909006B355B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sownloader;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader;
+				PRODUCT_NAME = Sownloader;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3F1565A2FCB1909006B355B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sownloader Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader.Extension;
+				PRODUCT_NAME = "Sownloader Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B3F1565B2FCB1909006B355B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sownloader Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader.Extension;
+				PRODUCT_NAME = "Sownloader Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B3F1565E2FCB1909006B355B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sownloader;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader;
+				PRODUCT_NAME = Sownloader;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B3F1565F2FCB1909006B355B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZNYN5CES4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sownloader;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marvinklein1508.sownloader;
+				PRODUCT_NAME = Sownloader;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3F156042FCB1908006B355B /* Build configuration list for PBXProject "Sownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F156502FCB1909006B355B /* Debug */,
+				B3F156512FCB1909006B355B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F156522FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F156532FCB1909006B355B /* Debug */,
+				B3F156542FCB1909006B355B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F156562FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F156572FCB1909006B355B /* Debug */,
+				B3F156582FCB1909006B355B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F156592FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F1565A2FCB1909006B355B /* Debug */,
+				B3F1565B2FCB1909006B355B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F1565D2FCB1909006B355B /* Build configuration list for PBXNativeTarget "Sownloader (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F1565E2FCB1909006B355B /* Debug */,
+				B3F1565F2FCB1909006B355B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3F156012FCB1908006B355B /* Project object */;
+}
